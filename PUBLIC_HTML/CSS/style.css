@@ -1,0 +1,68 @@
+
+#contentContainer{
+  position: absolute;
+  height: 1080px;
+  max-height: 100%;
+  width: 100%;
+
+  }
+#contentHeader{
+  background-color: white;
+  position:fixed;
+  top: 0%;
+  left: 0%;
+  width:100%;
+  height: 10%;
+  box-shadow: 0 0 3px 10px black;
+  z-index: 1;
+}
+#contentBody{
+  background-color: red;
+  position: absolute;
+  top: 3%;
+  left: -4%;
+  width: 99%;
+  height: 85%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  padding: 4%;
+  z-index: 0;
+
+}
+.roomCol{
+  background-color: green;
+  text-align: center;
+  position: relative;
+  margin: 2%;
+  height: 100%;
+  float: right;
+}
+.roomName{
+  height:10%;
+  width: 100%;
+  font-family: "roboto",cursive;
+  font-weight: 500;
+  font-size: 3vw;
+  color: white;
+}
+
+.nextBox{
+  height:40%;
+  width: 100%;
+  background-color: white;
+  border-radius: 50px;
+  box-shadow: 0 0 3px 5px black
+}
+
+.afterBox{
+  position: relative;
+  height:30%;
+  width: 100%;
+  top: 5%;
+  background-color: white;
+  border-radius: 50px;
+  box-shadow: 0 0 3px 5px black
+}
+.hide{
+  display:none;
+}
