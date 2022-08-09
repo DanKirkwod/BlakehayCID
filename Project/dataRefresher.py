@@ -9,18 +9,24 @@ import os.path
 import socket
 print("Importing complete")
 
+# gettingSecrets
+print("Loading Secrets")
+secretsFile = json.load(open("secrets.json"))
+calendarLink = secretsFile["calendar"]
+print(calendarLink)
+
 def gettingSecrets():
     print("empty")
 
 def updateData():
     print("Updating Data")
 #   Assigning Global Varibles
-    url = "#googleIcalLink"
+    url = calendarLink
     cal = Calendar(requests.get(url).text)
     events = list(sorted(cal.events))
     run  = 0
     data = {"ST":{},"S1":{},"S2":{},"MH":{},"B":{}, "dataUpdated":{},"TBC":{}}
-    file = open("data.JSON", "w")
+    file = open("PUBLIC_HTML/Data/data.json", "w")
     for i in events:
 #       Assigning Run-Specific Variables
         event=events[run]
@@ -69,6 +75,9 @@ while True:
     testConnection()
     if testConnection() == True:
         updateData()
+        update = 600
     else:
         print("NO CONNECTION")
-    time.sleep(600)
+        update = 10
+    time.sleep(update)
+    #break

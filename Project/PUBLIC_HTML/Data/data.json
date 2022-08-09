@@ -1,11 +1,5 @@
 {
     "ST": {
-        "3": {
-            "name": "Inspire: Musical Theatre Dance",
-            "description": "",
-            "startTime": 1659975300,
-            "endTime": 1659978900
-        },
         "4": {
             "name": "Abundance: Commercial",
             "description": "",
@@ -55,7 +49,7 @@
         }
     },
     "B": {},
-    "dataUpdated": 1659967148.916508,
+    "dataUpdated": 1660048747.254109,
     "TBC": {
         "10": {
             "name": "Open mic night",
