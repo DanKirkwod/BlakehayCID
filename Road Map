@@ -4,3 +4,8 @@
 -IN PROGRESS [2. A HTML page designed to display the data written from Javascript]
 
 3. A JS script to take data from the file and store into the HTML page when loaded. Auto refeshing the data periodically.
+
+
+
+VLC Start command:
+vlc.exe --intf dummy --playlist-autostart --loop --random --playlist-tree "<playlist dir>"
