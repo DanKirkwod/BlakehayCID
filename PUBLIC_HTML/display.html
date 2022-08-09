@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <title>Blakehay Customer Information Display</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/CSS/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Passion+One:wght@400;700;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
@@ -15,9 +15,7 @@
       const screenLocation = "Foyer";
       const htmlVer = "a.0";
     </script>
-
     <script type="text/javascript" src="JS/dataGrabber.js" charset="utf-8"></script>
-
     <!-- Errors -->
     <div class="" id="errorContainer">
 
@@ -32,49 +30,61 @@
         </div>
       </div>
     <!-- Alert -->
-    <div class="" id="alertContainer">
-
+    <div class="hide" id="alertContainer">
+      <div id="alert">
+        <div  class="name">
+          <span>ALERT</span>
+          </div>
+        <div id="alertText" class="desc">
+          <span>ALERT MESSAGE</span>
+          </div>
+        </div>
       </div>
     <!-- Ads -->
     <div class="" id="adSpace">
-
+        <img class="ad1 adImg" src="https://blakehaytheatre.co.uk/wp-content/uploads/2022/02/Events-201021-3.png">
+        <img class="ad2 adImg" src="">
+        <img class="ad3 adImg" src="">
+        <img class="ad4 adImg" src="">
+        <img class="ad5 adImg" src="">
+        <img class="ad6 adImg" src="">
       </div>
     <!-- Content -->
     <div class="" id="contentContainer">
       <div class="" id="contentHeader">
         <div class="invert" id="headerLogo">
-
+          <img src="https://blakehaytheatre.co.uk/wp-content/uploads/2020/10/Blakehay-Logo-Retina.png" alt="Blakehay Logo">
           </div>
         <div class="" id="pageTitle">
-
+          TODAY'S SCHEDULE
           </div>
-      </div>
+        </div>
       <div class="" id="contentBody">
-        <div class="roomCol" id="STcontainer">
+        <div class="roomCol " id="STcontainer">
           <div class="roomName">
             STUDIO
             </div>
           <div class="nextBox" id="STnext">
             <div class="time" id="STnexttime">
-
+              17:20 — 18:20
               </div>
             <div class="name" id="STnextname">
-
+              Event Title Goes Here
               </div>
             <div class="desc" id="STnextdesc">
-
+              Event Description Here
               </div>
             </div>
           <div class="afterBox" id="STafter">
             <div class="time" id="STaftertime">
-
+              17:20 — 18:20
               </div>
             <div class="name" id="STaftername">
-
+              Event Title Goes Here
               </div>
             </div>
             </div>
-        <div class="roomCol" id="S1container">
+        <div class="roomCol hide" id="S1container">
           <div class="roomName">
             STUDIO 1
             </div>
@@ -98,7 +108,7 @@
               </div>
             </div>
           </div>
-        <div class="roomCol" id="S2container">
+        <div class="roomCol hide" id="S2container">
           <div class="roomName">
             STUDIO 2
             </div>
@@ -122,7 +132,7 @@
               </div>
             </div>
           </div>
-        <div class="roomCol" id="MHcontainer">
+        <div class="roomCol " id="MHcontainer">
           <div class="roomName">
             AUDITORIUM
             </div>
@@ -146,7 +156,7 @@
               </div>
             </div>
           </div>
-        <div class="roomCol" id="Bcontainer">
+        <div class="roomCol hide" id="Bcontainer">
           <div class="roomName">
             BAR
             </div>
@@ -171,13 +181,13 @@
             </div>
           </div>
         <div class="roomCol" id="adColumn">
-
+          <img class="ad1 adImg" src="https://blakehaytheatre.co.uk/wp-content/uploads/2022/02/Events-201021-3.png">
           </div>
-      </div>
+        </div>
       </div>
     <!-- Special Messages -->
-    <div class="" id="MessagesContainer">
-
+    <div class="hide" id="MessagesContainer">
+      <span></span>
       </div>
   </body>
 </html>
