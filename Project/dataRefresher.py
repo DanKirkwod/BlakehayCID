@@ -57,7 +57,7 @@ def updateData():
             #Ignore Past Event
             print(str(event.name)+" is in the past.")
         run +=1 #Number of runs
-    data["dataUpdated"]=timeNow #Timestamp new data
+    data["dataUpdated"]=int(timeNow) #Timestamp new data
     print(json.dumps(data, indent=4))
     file.write(json.dumps(data, indent=4))
     file.close
