@@ -65,4 +65,8 @@ function setData(dataCall){
 
 setInterval(function(){
   setData("ST");
+  setData("S1");
+  setData("S2");
+  setData("MH");
+  setData("B");
 }, 1000)
