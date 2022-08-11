@@ -15,9 +15,6 @@ secretsFile = json.load(open("secrets.json"))
 calendarLink = secretsFile["calendar"]
 print(calendarLink)
 
-def gettingSecrets():
-    print("empty")
-
 def updateData():
     print("Updating Data")
 #   Assigning Global Varibles

@@ -79,27 +79,31 @@ body {
 }
 .time{
   height:25%;
-  width: 100%;
+  width: 94%;
   background: radial-gradient(at top,#1f1f1f,#000000);
   background-color: red;
   color: white;
   font-family: "Open Sans", cursive;
   font-weight: 700;
   font-size: 3vw;
+  padding-left: 3%;
+  padding-right: 3%
 }
 .name{
   height: 35%;
-  font-size: 4vw;
+  width: 98%;
+
   font-family: "Passion One",fantasy;
   font-weight: 400;
-  line-height: 0.7;
+  /*line-height: 0.7;*/
   text-align:left;
   margin-left: 1%;
   margin-top: 2%;
 }
 .desc{
   height: 40%;
-  font-size: 1vw;
+  width: 100%;
+  font-size: 30px;
   font-family: "Roboto",monospace;
   font-weight: 400;
   margin-left: 1%;
