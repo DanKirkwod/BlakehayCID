@@ -17,8 +17,10 @@
     </script>
     <script src="/JS/jquery-3.6.0.min.js" charset="utf-8"></script>
     <script src="JS/jquery.textfill.min.js" charset="utf-8"></script>
-    <!--<script type="text/javascript" src="JS/resizer.js" charset="utf-8"></script>-->
+    <script src="JS/jquery.csv.min.js" charset="utf-8"></script>
     <script src="JS/dataGrabber.js" charset="utf-8"></script>
+    <!-- <script type="text/javascript" src="JS/controllerInput.js" charset="utf-8"></script>
+    <script src="JS/dataGrabber.js" charset="utf-8"></script>-->
     <!-- Errors -->
     <div class="" id="errorContainer">
 
@@ -36,10 +38,10 @@
     <div class="hide" id="alertContainer">
       <div id="alert">
         <div  class="name">
-          <span>ALERT</span>
+          <span>DOORS IN:</span>
           </div>
         <div id="alertText" class="desc">
-          <span>ALERT MESSAGE CONTROLLED BY GOOGLE SHEET</span>
+          <span>COUNTDOWN CONTROLLED BY GOOGLE SHEET</span>
           </div>
         </div>
       </div>
@@ -78,7 +80,7 @@
               <span>Event Description Here</span>
               </div>
             </div>
-          <div class="afterBox" id="STafter">
+          <div class="afterBox hide" id="STafter">
             <div class="time" id="STaftertime">
               <span>17:20 — 18:20</span>
               </div>
@@ -102,7 +104,7 @@
               <span></span>
               </div>
             </div>
-          <div class="afterBox" id="S1after">
+          <div class="afterBox hide" id="S1after">
             <div class="time" id="S1aftertime">
               <span></span>
               </div>
@@ -126,7 +128,7 @@
               <span></span>
               </div>
             </div>
-          <div class="afterBox" id="S2after">
+          <div class="afterBox hide" id="S2after">
             <div class="time" id="S2aftertime">
               <span></span>
               </div>
@@ -150,7 +152,7 @@
               <span></span>
               </div>
             </div>
-          <div class="afterBox" id="MHafter">
+          <div class="afterBox hide" id="MHafter">
             <div class="time" id="MHaftertime">
               <span></span>
               </div>
@@ -174,7 +176,7 @@
               <span></span>
               </div>
             </div>
-          <div class="afterBox" id="Bafter">
+          <div class="afterBox hide" id="Bafter">
             <div class="time" id="Baftertime">
               <span></span>
               </div>

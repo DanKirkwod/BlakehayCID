@@ -15,6 +15,22 @@ secretsFile = json.load(open("secrets.json"))
 calendarLink = secretsFile["calendar"]
 print(calendarLink)
 
+def getIP():
+        s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+        s.settimeout(0)
+        ipfile = open("PUBLIC_HTML/Data/IP.txt", "w")
+        try:
+            # doesn't even have to be reachable
+            s.connect(('10.254.254.254', 1))
+            IP = s.getsockname()[0]
+        except Exception:
+            IP = 'x.x.x.x'
+        finally:
+            s.close()
+            ipfile.write(IP)
+            ipfile.close
+        return IP
+
 def updateData():
     print("Updating Data")
 #   Assigning Global Varibles
@@ -22,7 +38,7 @@ def updateData():
     cal = Calendar(requests.get(url).text)
     events = list(sorted(cal.events))
     run  = 0
-    data = {"ST":{},"S1":{},"S2":{},"MH":{},"B":{}, "dataUpdated":{},"TBC":{}}
+    data = {"ST":{},"S1":{},"S2":{},"MH":{},"B":{}, "dataUpdated":{}, "TBC":{}}
     file = open("PUBLIC_HTML/Data/data.json", "w")
     for i in events:
 #       Assigning Run-Specific Variables
@@ -68,11 +84,13 @@ def testConnection(url="https://www.google.com", timeout=3):
         print("No Connection")
     return False
 
+getIP()
+
 while True:
     testConnection()
     if testConnection() == True:
         updateData()
-        update = 600
+        update = 6
     else:
         print("NO CONNECTION")
         update = 10

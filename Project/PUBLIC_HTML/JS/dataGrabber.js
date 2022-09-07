@@ -1,5 +1,8 @@
 const scriptVer = "a.1"
-
+const ip = $.get("Data/IP.txt", function(data) {
+  return data
+})
+console.log(ip);
 
 function setData(dataCall){
   console.log(dataCall);
@@ -13,11 +16,11 @@ function setData(dataCall){
     var nextEvent = room[Object.keys(room)[0]];
     console.log(nextEvent)
     var afterEvent = room[Object.keys(room)[1]];
-    console.log(nextEvent)
+    console.log(afterEvent)
     var eventStartTime = new Date(nextEvent.startTime*1000);
-    var eventEndTime = new Date(nextEvent.startTime*1000);
+    var eventEndTime = new Date(nextEvent.endTime*1000);
     var eventDay = new Date(nextEvent.startTime*1000).setHours(0,0,0,0);
-    if (eventDay == today){
+    if (eventDay == today && eventEndTime > Date.now() && nextEvent.endTime != null){
       $(roomCall+"container").removeClass("hide")
       $(roomCall+"nexttime").html("<span>"+eventStartTime.getHours()+":"+("0"+eventStartTime.getMinutes()).slice(-2)+" — "+eventEndTime.getHours()+":"+("0"+eventEndTime.getMinutes()).slice(-2)+"</span>");
       $(roomCall+'nexttime').textfill({
@@ -35,14 +38,12 @@ function setData(dataCall){
         maxFontPixels: 30,
       });
     }else{
-      if($(roomCall+"container").hasClass("hide") == false) {
-        $(roomCall+"container").addClass("hide");
-      };
+      $(roomCall+"container").addClass("hide");
     };
     var eventStartTime = new Date(afterEvent.startTime*1000);
-    var eventEndTime = new Date(afterEvent.startTime*1000);
+    var eventEndTime = new Date(afterEvent.endTime*1000);
     var eventDay = new Date(afterEvent.startTime*1000).setHours(0,0,0,0);
-    if (eventDay == today){
+    if (eventDay == today && typeof afterEvent !== null){
       $(roomCall+"after").removeClass("hide")
       $(roomCall+"aftertime").html("<span>"+eventStartTime.getHours()+":"+("0"+eventStartTime.getMinutes()).slice(-2)+" — "+eventEndTime.getHours()+":"+("0"+eventEndTime.getMinutes()).slice(-2)+"</span>");
       $(roomCall+'aftertime').textfill({
@@ -54,10 +55,9 @@ function setData(dataCall){
         minFontPixels: 4,
         maxFontPixels: 90,
       });
+      console.log("After Update is running")
     }else{
-      if($(roomCall+"after").hasClass("hide") == false) {
-        $(roomCall+"after").addClass("hide");
-      };
+      $(roomCall+"after").addClass("hide");
     };
   })
 
@@ -65,4 +65,8 @@ function setData(dataCall){
 
 setInterval(function(){
   setData("ST");
+  setData("S1");
+  setData("S2");
+  setData("MH");
+  setData("B");
 }, 1000)

@@ -1,61 +1,9 @@
 {
-    "ST": {
-        "4": {
-            "name": "Abundance: Commercial",
-            "description": "",
-            "startTime": 1660065300,
-            "endTime": 1660068900
-        },
-        "5": {
-            "name": "Abundance: Heels",
-            "description": "",
-            "startTime": 1660069800,
-            "endTime": 1660073400
-        },
-        "7": {
-            "name": "The Sass Class",
-            "description": "",
-            "startTime": 1660151700,
-            "endTime": 1660155300
-        },
-        "8": {
-            "name": "Pedralta World Fusion Belly Dance",
-            "description": "",
-            "startTime": 1660156200,
-            "endTime": 1660159800
-        },
-        "11": {
-            "name": "Inspire: Musical Theatre Dance",
-            "description": "Example description",
-            "startTime": 1660580100,
-            "endTime": 1660583700
-        }
-    },
+    "ST": {},
     "S1": {},
-    "S2": {
-        "9": {
-            "name": "Pedralta World Fusion Belly Dance",
-            "description": "",
-            "startTime": 1660156200,
-            "endTime": 1660159800
-        }
-    },
-    "MH": {
-        "6": {
-            "name": "Maintenance",
-            "description": "",
-            "startTime": 1660118400,
-            "endTime": 1660129200
-        }
-    },
+    "S2": {},
+    "MH": {},
     "B": {},
-    "dataUpdated": 1660048747.254109,
-    "TBC": {
-        "10": {
-            "name": "Open mic night",
-            "description": "",
-            "startTime": 1660244400,
-            "endTime": 1660255200
-        }
-    }
+    "dataUpdated": 1662566352,
+    "TBC": {}
 }
